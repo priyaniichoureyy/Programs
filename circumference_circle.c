@@ -9,15 +9,15 @@ int main() {
              if(rad==0){
                  printf("This is point circle");
                  circum = 2*pie*rad;
-                 printf("%f",circum);
+                 printf("\n%f\n",circum);
              }
-            if(rad>0)
+            else if(rad>0)
              {
               circum = 2*pie*rad;
-            printf("Area of circle: %.2f",circum);
+            printf("Area of circle: %.2f\n",circum);
             }
             else{
-                 printf("Cannot calculate as negative values are given");
+                 printf("Cannot calculate as negative values are given\n");
                 }
                 printf("\nEnter your choice: ");
             scanf(" %c",&ch);
