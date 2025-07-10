@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 int main() {
-   int a,b,c,avg;
+  float a,b,c,avg;
    printf("Enter the value of a: ");
-   scanf("%d",&a);
+   scanf("%f",&a);
     printf("Enter the value of b: ");
-   scanf("%d",&b);
+   scanf("%f",&b);
     printf("Enter the value of c: ");
-   scanf("%d",&c);
+   scanf("%f",&c);
    avg=(a+b+c)/2;
-   printf("Average of %d,%d,%d is %d",a,b,c,avg);
+   printf("Average of %.2f,%.2f,%.2f is %.2f",a,b,c,avg);
    
    
     return 0;
