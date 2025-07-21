@@ -1,0 +1,53 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+class employee
+{
+   public:
+  string name[100];
+  int id[100];
+  int i,n;
+  void display()
+  {
+      cout<<"Enter how many employee you want to enter:  ";
+      cin>>n;
+      for(i=0;i<n;i++)
+      {
+      cout<<"Enter the details of employee: "<<i+1<<endl;
+      cout<<"Enter the name: ";
+      cin>>name[i];
+      cout<<"Enter id: ";
+      cin>>id[i];
+      }
+  }
+};
+
+  class manager:public employee{
+      public:
+      string department[100];
+      void get()
+      {
+          for(i=0;i<n;i++){
+          cout<<"Enter the department: "<<i+1<<endl;
+          cin>>department[i];}
+          
+      }
+      void show()
+      {
+          for(i=0;i<n;i++){
+          cout<<"Name is: "<<name[i]<<endl;
+          cout<<"Id is: "<<id[i]<<endl;
+          cout<<"Deparment is: "<<department[i]<<endl;}
+      }
+  };
+
+int main() {
+    
+    manager m1;
+    m1.display();
+    m1.get();
+    m1.show();
+    
+    return 0;
+}
