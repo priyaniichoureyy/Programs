@@ -1,0 +1,64 @@
+
+#include <iostream>
+using namespace std;
+
+class student{
+  public:
+  int roll;
+  void get()
+  {
+      cout<<"Enter the roll no.: ";
+      cin>>roll;
+  }
+  void show()
+  {
+      cout<<"Roll no. is: "<<roll<<endl;
+  }
+};
+
+class test : public student{
+    public:
+    int m1,m2;
+    void getmarks()
+    { 
+        cout<<"Enter 1st marks: ";
+        cin>>m1;
+        cout<<"Enter 2nd marks: ";
+        cin>>m2;
+    }
+    void showmarks()
+    {  
+        cout<<"m1 is: "<<m1<<endl;
+        cout<<"m2 is: "<<m2<<endl;
+    }
+};
+
+class result : public test{
+    public:
+    int result;
+    void showresult()
+    {
+    result = m1+m2;
+    cout<<"The result is: "<<m1+m2<<endl;
+    }
+};
+
+
+int main() {
+    result r1,r2;
+    cout<<"Student result"<<endl;
+    cout<<"_____________________"<<endl;
+    r1.get();
+    r1.getmarks();
+    r1.show();
+    r1.showmarks();
+    r1.showresult();
+     cout<<"_____________________"<<endl;
+    r2.get();
+    r2.getmarks();
+    r2.show();
+    r2.showmarks();
+    r2.showresult();
+    
+    return 0;
+}
