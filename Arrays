@@ -1,0 +1,79 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+void create(int n,int arr[])
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+     printf("\n");
+}
+
+void traverse(int arr[],int n){
+    int i;
+   for(i=0;i<n;i++)
+   {
+       printf("%d",arr[i]);
+       printf("\n");
+   }
+    
+}
+
+void insert_end(int arr[],int *n)
+{
+    int num,i;
+    printf("Enter value to insert at end: ");
+    scanf("%d",&num);
+    arr[*n]=num;
+    (*n)++;
+}
+
+void insert_start(int arr[],int *n)
+{
+     int num,i;
+    printf("Enter value to insert at start: ");
+    scanf("%d",&num);
+    for(i=*n;i>0;i--)
+    {
+        arr[i]=arr[i-1];
+    }
+    arr[0]=num;
+    (*n)++;
+}
+
+void insert_pos(int arr[],int *n)
+{
+    int num,pos,i;
+    printf("Enter value to insert at position: ");
+    scanf("%d",&num);
+    printf("Enter the position to insert: ");
+    scanf("%d",&pos);
+    for(i=*n;i>=pos;i--)
+    {
+        arr[i]=arr[i-1];
+    }
+            arr[pos]=num;
+      (*n)++;
+}
+
+int main() {
+    int num,arr[100];
+    printf("Enter how many values you want to enter: ");
+    scanf("%d",&num);
+    printf("Enter the values %d of array ",num);
+    create(num,arr);
+     printf("Values are: ");
+    traverse(arr,num);
+    printf("Do you want to insert: ");
+    insert_end(arr,&num);
+    traverse(arr,num);
+      printf("Do you want to insert: ");
+      insert_start(arr,&num);
+      traverse(arr,num);
+      printf("Enter value to insert at specific position: ");
+      insert_pos(arr,&num);
+      traverse(arr,num);
+    return 0;
+}
